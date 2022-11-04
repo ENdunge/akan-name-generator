@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Akan Name Generator</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body  >
+  <div class="form">
+    <form name="myForm" onsubmit="validate();return false">
+      <div class="title">Akan Name Generator</div>
+      <div class="subtitle">Know your akan name!</div>
+      <div class="input-container ic1">
+        <input id="year" class="input" type="number" placeholder=" " />
+        <div class="cut"></div>
+        <label for="year" class="placeholder" id="year-label">Year of birth</label>
+      </div>
+      <div class="input-container ic2">
+        <input id="month" class="input" type="number" placeholder=" " />
+        <div class="cut"></div>
+        <label for="month" class="placeholder" id="month-label">Month of birth</label>
+      </div>
+      <div class="input-container ic2">
+        <input id="date" class="input" type="number" placeholder=" " />
+        <div class="cut"></div>
+        <label for="date" class="placeholder" id="date-label">Date of birth</label>
+      </div>
+      <div class="radio-container">
+        <p id="gender-label">Gender</p>
+        <ul>
+          <li>
+            <input type="radio" name="gender" id="male">
+            <label for="male">Male</label> 
+            <div class="check"></div>
+          </li>
+          <li>
+            <input type="radio" name="gender" id="female">
+            <label for="female">Female</label>
+            <div class="check"><div class="inside"></div></div>
+          </li>
+        </ul>
+      </div>
+      <button type="submit" class="submit" onclick="findName();">submit</button>
+    </form>
+    <h2 style="visibility: hidden" id="results">Akan name generator</h2>
+  </div>
+<script src="javascript/script.js"></script>
+</body>
+</html>
