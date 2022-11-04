@@ -54,3 +54,160 @@ function validate() {
     return true;
   }
 }
+
+function calculateDayValue() {
+  year = document.getElementById("year").value;
+  CC = parseInt(year.substring(0, 2));
+  YY = parseInt(year.substring(2, 4));
+  MM = parseInt(document.getElementById("month").value);
+  DD = parseInt(document.getElementById("date").value);
+  d = (CC / 4 - 2 * CC - 1 + (5 * YY) / 4 + (26 * (MM + 1)) / 10 + DD) % 7;
+  return Math.floor(d);
+}
+
+function getGender() {
+  var genders = document.getElementsByName("gender");
+  var results = document.getElementById("results");
+  if (genders[0].checked == true) {
+    var gender = "male";
+  } else if (genders[1].checked == true) {
+    var gender = "female";
+  } else {
+    return false;
+  }
+  switch (gender) {
+    case "male":
+      if (dayValue == 1) {
+        results.innerText =
+          "You were born on " +
+          dayNames[0] +
+          " and Your akan name is " +
+          maleNames[0] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == 2) {
+        results.innerText =
+          "You were born on " +
+          dayNames[1] +
+          " and Your akan name is " +
+          maleNames[1] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == 3) {
+        results.innerText =
+          "You were born on " +
+          dayNames[2] +
+          " and Your akan name is " +
+          maleNames[2] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == 4) {
+        results.innerText =
+          "You were born on " +
+          dayNames[3] +
+          " and Your akan name is " +
+          maleNames[3] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == 5) {
+        results.innerText =
+          "You were born on " +
+          dayNames[4] +
+          " and Your akan name is " +
+          maleNames[4] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == 6) {
+        results.innerText =
+          "You were born on " +
+          dayNames[5] +
+          " and Your akan name is " +
+          maleNames[5] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == -0) {
+        results.innerText =
+          "You were born on " +
+          dayNames[6] +
+          " and Your akan name is " +
+          maleNames[6] +
+          "!";
+
+        toggle(results);
+      }
+      break;
+    case "female":
+      if (dayValue == 1) {
+        results.innerText =
+          "You were born on " +
+          dayNames[0] +
+          " and Your akan name is " +
+          femaleNames[0] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == 2) {
+        results.innerText =
+          "You were born on " +
+          dayNames[1] +
+          " and Your akan name is " +
+          femaleNames[1] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == 3) {
+        results.innerText =
+          "You were born on " +
+          dayNames[2] +
+          " and Your akan name is " +
+          femaleNames[2] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == 4) {
+        results.innerText =
+          "You were born on " +
+          dayNames[3] +
+          " and Your akan name is " +
+          femaleNames[3] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == 5) {
+        results.innerText =
+          "You were born on " +
+          dayNames[4] +
+          " and Your akan name is " +
+          femaleNames[4] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == 6) {
+        results.innerText =
+          "You were born on " +
+          dayNames[5] +
+          " and Your akan name is " +
+          femaleNames[5] +
+          "!";
+
+        toggle(results);
+      } else if (dayValue == -0) {
+        results.innerText =
+          "You were born on " +
+          dayNames[6] +
+          " and Your akan name is " +
+          femaleNames[6] +
+          "!";
+
+        toggle(results);
+      }
+      break;
+    default:
+  }
+}
