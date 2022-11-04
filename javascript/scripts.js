@@ -211,3 +211,16 @@ function getGender() {
     default:
   }
 }
+
+function findName() {
+  dayValue = calculateDayValue();
+  getGender();
+}
+
+function toggle(results) {
+  if (results.style.visibility === "visible") {
+    results.style.visibility = "hidden";
+  } else {
+    results.style.visibility = "visible";
+  }
+}
