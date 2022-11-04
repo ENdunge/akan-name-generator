@@ -211,7 +211,6 @@ function getGender() {
     default:
   }
 }
-
 function findName() {
   dayValue = calculateDayValue();
   getGender();
