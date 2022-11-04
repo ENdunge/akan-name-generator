@@ -14,7 +14,7 @@ This project is a web application that takes a user's birthday and calculates th
 
 ## Live Page
 
-https:/ENdunge.github.io/akan-name-generator
+https://endunge.github.io/akan-name-generator/
 
 ## Installation / Setup instruction
 
